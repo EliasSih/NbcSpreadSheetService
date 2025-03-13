@@ -23,7 +23,7 @@ If a cell indirectly points back to itself through other cells, the code recogni
 ## How Expressions Are Evaluated
 - **Sum**: Adds together the numeric values from each referenced cell.
 - **Product**: Multiplies the numeric values from each referenced cell.
-- Additional operations can be added in the future by extending the evaluation logic (e.g., using a switch statement for more operation types).
+- Additional operations can be added in the future by extending the evaluation logic.
 
 ## Tests (JUnit) and How to Run Them
 All tests rely on JUnit. To compile and run them:
