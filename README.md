@@ -7,7 +7,7 @@ This command-line program reads a CSV file, maps its contents to a grid, and wri
 - Each line in the CSV file is read, and each comma-delimited element becomes a cell.
 - If a cell looks like an expression (for instance, `#(sum A1 B2)`), it is stored separately for later evaluation.
 - Once all lines are read, these expressions are evaluated so each reference is replaced by a computed value.
-- Each row of the CSV is handled once. As lines are read, cells go straight into the grid. If any cell appears to be an expression (for instance, #(sum A1 B2)), it is added right away to cachedExpressions, keyed by its location. This saves a full scan later on. Once loading finishes, the system can iterate over the stored expressions without searching every cell. This single-pass strategy keeps both memory and CPU use in check.
+- Each row of the CSV is handled once. As lines are read, cells go straight into the grid. If any cell appears to be an expression (for instance, #(sum A1 B2)), it is added right away to cachedExpressions, keyed by its location. This saves a full scan later on. Once loading finishes, the system can iterate over the stored expressions without searching every cell. This single-pass strategy keeps both memory and CPU use low.
 
 ## Recursively Evaluating Expressions
 Whenever an expression cell references other cells, the system inspects each reference:
